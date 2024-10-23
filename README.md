@@ -74,6 +74,7 @@ No modules.
 | <a name="input_has_discussions"></a> [has\_discussions](#input\_has\_discussions) | Enable repository discussions | `bool` | `false` | no |
 | <a name="input_homepage_url"></a> [homepage\_url](#input\_homepage\_url) | Repository homepage URL | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Repository name | `string` | n/a | yes |
+| <a name="input_poc"></a> [poc](#input\_poc) | Is this repository a Proof of Concept? | `bool` | n/a | yes |
 | <a name="input_required_checks"></a> [required\_checks](#input\_required\_checks) | List of required checks | `list(string)` | `[]` | no |
 | <a name="input_secrets"></a> [secrets](#input\_secrets) | key:value map for GitHub actions secrets | `map(any)` | `{}` | no |
 | <a name="input_team_access"></a> [team\_access](#input\_team\_access) | Team access types for created repository | <pre>object({<br>    admin    = optional(list(string))<br>    maintain = optional(list(string))<br>    push     = optional(list(string))<br>    pull     = optional(list(string))<br>  })</pre> | <pre>{<br>  "admin": [],<br>  "maintain": [],<br>  "pull": [],<br>  "push": []<br>}</pre> | no |
