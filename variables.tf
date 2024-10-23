@@ -88,3 +88,8 @@ variable "archive_on_destroy" {
   description = "Archive repository instead of deleting it on destroy"
   default     = true
 }
+
+variable "poc" {
+  type        = bool
+  description = "Is this repository a Proof of Concept?"
+}

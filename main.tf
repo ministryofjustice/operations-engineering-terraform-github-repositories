@@ -1,6 +1,10 @@
 # Repository basics
 #tfsec:ignore:github-repositories-private
 
+locals {
+  complete_topics = var.poc == true ? concat(var.topics, ["poc"]) : var.topics
+}
+
 resource "github_repository" "default" {
   name                   = var.name
   description            = join(" • ", [var.description, "This repository is defined and managed in Terraform"])
@@ -20,7 +24,7 @@ resource "github_repository" "default" {
   archived               = false
   archive_on_destroy     = var.archive_on_destroy
   vulnerability_alerts   = true
-  topics                 = var.topics
+  topics                 = local.complete_topics
 
   security_and_analysis {
     dynamic "advanced_security" {
