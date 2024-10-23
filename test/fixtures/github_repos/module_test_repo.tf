@@ -5,6 +5,7 @@ module "module-test-repo" {
   description     = "This repository was created by the terraform github repository unit test"
   homepage_url    = "https://github.com/ministryofjustice/terraform-github-repository"
   has_discussions = true
+  poc = false
   topics          = ["operations-engineering"]
   archive_on_destroy = false 
   variables = {
