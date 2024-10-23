@@ -90,6 +90,6 @@ variable "archive_on_destroy" {
 }
 
 variable "poc" {
-  type = bool
+  type        = bool
   description = "Is this repository a Proof of Concept?"
 }
